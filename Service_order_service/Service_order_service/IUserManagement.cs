@@ -12,7 +12,7 @@
             throw new NotImplementedException();
         }
 
-        public void UpdateUser(int UserId, NewDate NewDate)
+        public void UpdateUser(int UserId)
         {
             throw new NotImplementedException();
         }

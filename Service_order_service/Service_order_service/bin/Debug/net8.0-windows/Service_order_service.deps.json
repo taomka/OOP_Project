@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Service_order_service/1.0.0": {
+        "runtime": {
+          "Service_order_service.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Service_order_service/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

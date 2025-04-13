@@ -1,15 +1,15 @@
 ﻿namespace Service_order_service
 {
-    abstract class User
+    public abstract class User
     {
-        private int UserId;
-        private string? Name;
-        private string? Surname;
-        private string? Email;
-        private DateTime DateOfBirth;
-        private string? Password;
-        private string? PhoneNumber;
-        private double Balance;
+        public int UserId;
+        public string? Name;
+        public string? Surname;
+        public string? Email;
+        public DateTime DateOfBirth;
+        public string? Password;
+        public string? PhoneNumber;
+        public double Balance;
 
         public string GetName()
         {

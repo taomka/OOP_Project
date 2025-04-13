@@ -3,20 +3,44 @@
   "WorkspaceRootPath": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8839EA02-7A3D-4F07-AFD2-AF578A17CC24}|Test_OOP_Project\\Test_OOP_Project.csproj|f:\\documents\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\oop_project\\service_order_service\\test_oop_project\\customertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8839EA02-7A3D-4F07-AFD2-AF578A17CC24}|Test_OOP_Project\\Test_OOP_Project.csproj|solutionrelative:test_oop_project\\customertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BCEA329-8782-4277-8FA6-F0BD1EFD451F}|Service_order_service\\Service_order_service.csproj|f:\\documents\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\oop_project\\service_order_service\\service_order_service\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BCEA329-8782-4277-8FA6-F0BD1EFD451F}|Service_order_service\\Service_order_service.csproj|solutionrelative:service_order_service\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8839EA02-7A3D-4F07-AFD2-AF578A17CC24}|Test_OOP_Project\\Test_OOP_Project.csproj|f:\\documents\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\oop_project\\service_order_service\\test_oop_project\\mstestsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8839EA02-7A3D-4F07-AFD2-AF578A17CC24}|Test_OOP_Project\\Test_OOP_Project.csproj|solutionrelative:test_oop_project\\mstestsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1BCEA329-8782-4277-8FA6-F0BD1EFD451F}|Service_order_service\\Service_order_service.csproj|f:\\documents\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\oop_project\\service_order_service\\service_order_service\\rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BCEA329-8782-4277-8FA6-F0BD1EFD451F}|Service_order_service\\Service_order_service.csproj|solutionrelative:service_order_service\\rating.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BCEA329-8782-4277-8FA6-F0BD1EFD451F}|Service_order_service\\Service_order_service.csproj|f:\\documents\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\oop_project\\service_order_service\\service_order_service\\iusermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BCEA329-8782-4277-8FA6-F0BD1EFD451F}|Service_order_service\\Service_order_service.csproj|solutionrelative:service_order_service\\iusermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BCEA329-8782-4277-8FA6-F0BD1EFD451F}|Service_order_service\\Service_order_service.csproj|f:\\documents\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\oop_project\\service_order_service\\service_order_service\\iordermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BCEA329-8782-4277-8FA6-F0BD1EFD451F}|Service_order_service\\Service_order_service.csproj|solutionrelative:service_order_service\\iordermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BCEA329-8782-4277-8FA6-F0BD1EFD451F}|Service_order_service\\Service_order_service.csproj|f:\\documents\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\oop_project\\service_order_service\\service_order_service\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BCEA329-8782-4277-8FA6-F0BD1EFD451F}|Service_order_service\\Service_order_service.csproj|solutionrelative:service_order_service\\orderstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BCEA329-8782-4277-8FA6-F0BD1EFD451F}|Service_order_service\\Service_order_service.csproj|f:\\documents\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\oop_project\\service_order_service\\service_order_service\\servicecategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BCEA329-8782-4277-8FA6-F0BD1EFD451F}|Service_order_service\\Service_order_service.csproj|solutionrelative:service_order_service\\servicecategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BCEA329-8782-4277-8FA6-F0BD1EFD451F}|Service_order_service\\Service_order_service.csproj|f:\\documents\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\oop_project\\service_order_service\\service_order_service\\specialist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BCEA329-8782-4277-8FA6-F0BD1EFD451F}|Service_order_service\\Service_order_service.csproj|solutionrelative:service_order_service\\specialist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BCEA329-8782-4277-8FA6-F0BD1EFD451F}|Service_order_service\\Service_order_service.csproj|f:\\documents\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\oop_project\\service_order_service\\service_order_service\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BCEA329-8782-4277-8FA6-F0BD1EFD451F}|Service_order_service\\Service_order_service.csproj|solutionrelative:service_order_service\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BCEA329-8782-4277-8FA6-F0BD1EFD451F}|Service_order_service\\Service_order_service.csproj|f:\\documents\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\oop_project\\service_order_service\\service_order_service\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BCEA329-8782-4277-8FA6-F0BD1EFD451F}|Service_order_service\\Service_order_service.csproj|solutionrelative:service_order_service\\admin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BCEA329-8782-4277-8FA6-F0BD1EFD451F}|Service_order_service\\Service_order_service.csproj|f:\\documents\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\oop_project\\service_order_service\\service_order_service\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1BCEA329-8782-4277-8FA6-F0BD1EFD451F}|Service_order_service\\Service_order_service.csproj|solutionrelative:service_order_service\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1BCEA329-8782-4277-8FA6-F0BD1EFD451F}|Service_order_service\\Service_order_service.csproj|f:\\documents\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\oop_project\\service_order_service\\service_order_service\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1BCEA329-8782-4277-8FA6-F0BD1EFD451F}|Service_order_service\\Service_order_service.csproj|solutionrelative:service_order_service\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1BCEA329-8782-4277-8FA6-F0BD1EFD451F}|Service_order_service\\Service_order_service.csproj|f:\\documents\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\oop_project\\service_order_service\\service_order_service\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -34,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 269,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,71 +70,145 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Service_order_service\\Customer.cs",
-              "RelativeDocumentMoniker": "Service_order_service\\Customer.cs",
-              "ToolTip": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Service_order_service\\Customer.cs",
-              "RelativeToolTip": "Service_order_service\\Customer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAFAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "ServiceCategory.cs",
+              "DocumentMoniker": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Service_order_service\\ServiceCategory.cs",
+              "RelativeDocumentMoniker": "Service_order_service\\ServiceCategory.cs",
+              "ToolTip": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Service_order_service\\ServiceCategory.cs",
+              "RelativeToolTip": "Service_order_service\\ServiceCategory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwQAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T10:30:22.687Z",
+              "WhenOpened": "2025-04-01T10:39:03.635Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CustomerTests.cs",
-              "DocumentMoniker": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Test_OOP_Project\\CustomerTests.cs",
-              "RelativeDocumentMoniker": "Test_OOP_Project\\CustomerTests.cs",
-              "ToolTip": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Test_OOP_Project\\CustomerTests.cs",
-              "RelativeToolTip": "Test_OOP_Project\\CustomerTests.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwUAAAAiAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "OrderStatus.cs",
+              "DocumentMoniker": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Service_order_service\\OrderStatus.cs",
+              "RelativeDocumentMoniker": "Service_order_service\\OrderStatus.cs",
+              "ToolTip": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Service_order_service\\OrderStatus.cs",
+              "RelativeToolTip": "Service_order_service\\OrderStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwcAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T10:30:08.644Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MSTestSettings.cs",
-              "DocumentMoniker": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Test_OOP_Project\\MSTestSettings.cs",
-              "RelativeDocumentMoniker": "Test_OOP_Project\\MSTestSettings.cs",
-              "ToolTip": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Test_OOP_Project\\MSTestSettings.cs",
-              "RelativeToolTip": "Test_OOP_Project\\MSTestSettings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T10:29:42.148Z",
+              "WhenOpened": "2025-04-01T10:39:02.637Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "IOrderManagement.cs",
+              "DocumentMoniker": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Service_order_service\\IOrderManagement.cs",
+              "RelativeDocumentMoniker": "Service_order_service\\IOrderManagement.cs",
+              "ToolTip": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Service_order_service\\IOrderManagement.cs",
+              "RelativeToolTip": "Service_order_service\\IOrderManagement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T10:38:50.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUserManagement.cs",
+              "DocumentMoniker": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Service_order_service\\IUserManagement.cs",
+              "RelativeDocumentMoniker": "Service_order_service\\IUserManagement.cs",
+              "ToolTip": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Service_order_service\\IUserManagement.cs",
+              "RelativeToolTip": "Service_order_service\\IUserManagement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvw4AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T10:38:49.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Rating.cs",
+              "DocumentMoniker": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Service_order_service\\Rating.cs",
+              "RelativeDocumentMoniker": "Service_order_service\\Rating.cs",
+              "ToolTip": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Service_order_service\\Rating.cs",
+              "RelativeToolTip": "Service_order_service\\Rating.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T10:38:54.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Order.cs",
+              "DocumentMoniker": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Service_order_service\\Order.cs",
+              "RelativeDocumentMoniker": "Service_order_service\\Order.cs",
+              "ToolTip": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Service_order_service\\Order.cs",
+              "RelativeToolTip": "Service_order_service\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T10:38:43.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Admin.cs",
+              "DocumentMoniker": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Service_order_service\\Admin.cs",
+              "RelativeDocumentMoniker": "Service_order_service\\Admin.cs",
+              "ToolTip": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Service_order_service\\Admin.cs",
+              "RelativeToolTip": "Service_order_service\\Admin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T10:38:42.231Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Specialist.cs",
+              "DocumentMoniker": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Service_order_service\\Specialist.cs",
+              "RelativeDocumentMoniker": "Service_order_service\\Specialist.cs",
+              "ToolTip": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Service_order_service\\Specialist.cs",
+              "RelativeToolTip": "Service_order_service\\Specialist.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T10:38:38.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Service_order_service\\Customer.cs",
+              "RelativeDocumentMoniker": "Service_order_service\\Customer.cs",
+              "ToolTip": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Service_order_service\\Customer.cs",
+              "RelativeToolTip": "Service_order_service\\Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T19:34:05.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "User.cs",
               "DocumentMoniker": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Service_order_service\\User.cs",
               "RelativeDocumentMoniker": "Service_order_service\\User.cs",
               "ToolTip": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Service_order_service\\User.cs",
               "RelativeToolTip": "Service_order_service\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-01T10:28:17.434Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Service_order_service\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Service_order_service\\MainWindow.xaml",
               "ToolTip": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Service_order_service\\MainWindow.xaml",
               "RelativeToolTip": "Service_order_service\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-04-01T10:27:43.654Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-01T10:27:43.654Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Service_order_service\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Service_order_service\\MainWindow.xaml.cs",
@@ -118,8 +216,7 @@
               "RelativeToolTip": "Service_order_service\\MainWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T10:27:40.229Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-01T10:27:40.229Z"
             }
           ]
         },

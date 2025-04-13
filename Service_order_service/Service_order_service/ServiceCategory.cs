@@ -1,6 +1,6 @@
 ﻿namespace Service_order_service
 {
-    enum ServiceCategory
+    public enum ServiceCategory
     {
         HomeRepair,
         Delivery,

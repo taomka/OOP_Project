@@ -1,10 +1,10 @@
 ﻿namespace Service_order_service
 {
-    enum OrderStatus
+    public enum OrderStatus
     {
         Pending,
         InProgress,
         Completed,
-        Cancelled
+        Canceled
     }
 }

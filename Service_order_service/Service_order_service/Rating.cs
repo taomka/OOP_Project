@@ -1,9 +1,14 @@
 ﻿namespace Service_order_service
 {
-    class Rating
+    public class Rating
     {
-        private int Score;
-        private string? Comment;
+        public int Score;
+        public string? Comment;
+
+        public Rating(int score, string? comment = null)
+        {
+            throw new NotImplementedException();
+        }
 
         public int GetScore()
         {

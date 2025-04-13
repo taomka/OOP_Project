@@ -1,6 +1,6 @@
 ﻿namespace Service_order_service
 {
-    class Customer : User
+    public class Customer : User
     {
         public Customer(int userId, string name, string surname, string email, DateTime dateOfBirth, string password, string phoneNumber, double balance)
         { 

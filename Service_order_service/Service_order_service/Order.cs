@@ -1,15 +1,20 @@
 ﻿namespace Service_order_service
 {
-    class Order
+    public class Order
     {
-        private int OrderId;
-        private ServiceCategory Category;
-        private string? Description;
-        private double Price;
-        private string? Location;
-        private OrderStatus Status;
-        private Customer? Customer;
-        private Specialist? Specialist;
+        public int OrderId;
+        public ServiceCategory Category;
+        public string? Description;
+        public double Price;
+        public string? Location;
+        public OrderStatus Status;
+        public Customer? Customer;
+        public Specialist? Specialist;
+
+        public Order(int orderId, ServiceCategory category, string? description, double price, string? location, OrderStatus status, Customer? customer, Specialist? specialist)
+        {
+            throw new NotImplementedException();
+        }
 
         public ServiceCategory GetCategory()
         {
@@ -51,7 +56,7 @@
             throw new NotImplementedException(); 
         }
 
-        public void Edit()
+        public void Edit(string newDescription, double newPrice)
         {
             throw new NotImplementedException();
         }
