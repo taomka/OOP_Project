@@ -5,7 +5,7 @@ namespace Test_OOP_Project
     [TestClass]
     public sealed class RatingTests
     {
-        private Rating rating;
+        private Rating rating = null!;
 
         [TestInitialize]
         public void Setup()
@@ -17,60 +17,30 @@ namespace Test_OOP_Project
         public void GetScore()
         {
             // Act & Assert
-            Assert.AreEqual(4, rating.GetScore());
+            Assert.AreEqual(4, rating.Score);
         }
 
         [TestMethod]
         public void GetComment()
         {
             // Act & Assert
-            Assert.AreEqual("Good service.", rating.GetComment());
-        }
-
-        [TestMethod]
-        public void CalculateAverage_CorrectAverageRating()
-        {
-            // Arrange
-            double expectedAverage = (4 + 5) / 2.0;
-
-            // Act
-            double actualAverage = rating.CalculateAverage(1);
-
-            // Assert
-            Assert.AreEqual(expectedAverage, actualAverage, 0.01);
-        }
-
-        [TestMethod]
-        public void CalculateAverage_EmptyComment()
-        {
-            // Arrange
-            Rating ratingWithoutComment = new Rating(5);
-
-            // Act
-            double average = ratingWithoutComment.CalculateAverage(1);
-
-            // Assert
-            Assert.AreEqual(5.0, average, 0.01);
+            Assert.AreEqual("Good service.", rating.Comment);
         }
 
         [TestMethod]
         public void GetScore_NegativeScore()
         {
-            // Arrange
-            Rating negativeRating = new Rating(-1);
-
             // Act & Assert
-            Assert.AreEqual(-1, negativeRating.GetScore());
+            var exception = Assert.ThrowsException<ArgumentException>(() => new Rating(-1));
+            Assert.AreEqual("Score must be between 1 and 5.", exception.Message);
         }
 
         [TestMethod]
         public void GetComment_WhenNoCommentIsProvided()
         {
-            // Arrange
-            Rating noCommentRating = new Rating(5);
-
             // Act & Assert
-            Assert.IsNull(noCommentRating.GetComment());
+            var exception = Assert.ThrowsException<ArgumentException>(() => new Rating(5, ""));
+            Assert.AreEqual("Comment cannot be empty.", exception.Message);
         }
     }
 }

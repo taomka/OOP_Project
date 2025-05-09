@@ -1,20 +1,9 @@
 ﻿namespace Service_order_service
 {
-    interface IUserManagement
+    public interface IUserManagement
     {
-        public void AddUser(User user)
-        { 
-            throw new NotImplementedException();
-        }
-
-        public void RemoveUser(User user)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void UpdateUser(int UserId)
-        {
-            throw new NotImplementedException();
-        }
+        void AddUser(User user);
+        void RemoveUser(User user);
+        void UpdateUser(int userId, string? newPassword = null, string? newPhoneNumber = null);
     }
 }

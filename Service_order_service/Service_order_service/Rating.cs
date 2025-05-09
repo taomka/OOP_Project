@@ -2,27 +2,29 @@
 {
     public class Rating
     {
-        public int Score;
-        public string? Comment;
+        private int _score;
+        private string? _comment;
 
+        public int Score
+        {
+            get => _score;
+            set => _score = value >= 1 && value <= 5
+                ? value
+                : throw new ArgumentException("Score must be between 1 and 5.");
+        }
+
+        public string? Comment
+        {
+            get => _comment;
+            set => _comment = !string.IsNullOrWhiteSpace(value)
+                ? value
+                : throw new ArgumentException("Comment cannot be empty.");
+        }
+        
         public Rating(int score, string? comment = null)
         {
-            throw new NotImplementedException();
-        }
-
-        public int GetScore()
-        {
-            throw new NotImplementedException();
-        }
-
-        public string? GetComment()
-        {
-            throw new NotImplementedException();
-        }
-
-        public double CalculateAverage(int UserId)
-        {
-            throw new NotImplementedException();
+            Score = score;
+            Comment = comment;
         }
     }
 }

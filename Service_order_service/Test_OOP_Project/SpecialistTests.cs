@@ -1,107 +1,100 @@
 ﻿using Service_order_service;
+using System.Text.Json;
 
 namespace Test_OOP_Project
 {
     [TestClass]
     public sealed class SpecialistTests
     {
-        private Specialist specialist;
+        private Specialist specialist = null!;
+        private Customer customer = null!;
+        private Order order = null!;
 
-        [TestMethod]
-        public void Constructor()
+        [TestInitialize]
+        public void Setup()
         {
-            // Arrange
-            int userId = 1;
-            string name = "John";
-            string surname = "Doe";
-            string email = "john.doe@example.com";
-            DateTime dateOfBirth = new DateTime(1990, 5, 20);
-            string password = "SecurePass123";
-            string phoneNumber = "+38(066)1233567";
-            double balance = 100.0;
-
-            // Act
-            var specialist = new Specialist(userId, name, surname, email, dateOfBirth, password, phoneNumber, balance);
-
-            // Assert
-            Assert.AreEqual(userId, specialist.UserId);
-            Assert.AreEqual(name, specialist.Name);
-            Assert.AreEqual(surname, specialist.Surname);
-            Assert.AreEqual(email, specialist.Email);
-            Assert.AreEqual(dateOfBirth, specialist.DateOfBirth);
-            Assert.AreEqual(password, specialist.Password);
-            Assert.AreEqual(phoneNumber, specialist.PhoneNumber);
-            Assert.AreEqual(balance, specialist.Balance);
+            specialist = new Specialist(3, "Alice", "Johnson", "alice.johnson@example.com", new DateTime(1995, 3, 15), "Pass456", "+38(066)1264567", 150.0);
+            customer = new Customer(1, "Bob", "Williams", "bob.williams@example.com", new DateTime(1980, 7, 25), "CustPass123", "+38(066)9876543", 300.0);
+            order = new Order(2, "Design logo", ServiceCategory.Design, "Design logo for YT channel", 100.0, "456 Elm St", new DateTime(2025, 12, 31), PaymentTerm.Prepayment, OrderStatus.InProgress, customer, null);
+            var ordersJson = JsonSerializer.Serialize(new List<Order> { order });
+            File.WriteAllText("orders.json", ordersJson);
         }
 
         [TestMethod]
+        [DoNotParallelize]
         public void ApplyForOrder()
         {
-            // Arrange
-            var specialist = new Specialist(2, "Jane", "Smith", "jane.smith@example.com", new DateTime(1985, 8, 10), "Pass123", "+38(066)5234567", 200.0);
-            var order = new Order(1, ServiceCategory.HomeRepair, "Fix plumbing", 50.0, "123 Main St", OrderStatus.Pending, null, null);
-
             // Act
             specialist.ApplyForOrder(order);
 
             // Assert
-            Assert.AreEqual(specialist, order.Specialist);
+            Assert.IsNotNull(order);
+            Assert.IsNotNull(order.Specialist);
+            Assert.AreEqual(specialist.Email, order.Specialist.Email);
         }
 
         [TestMethod]
+        [DoNotParallelize]
         public void CompleteOrder()
         {
-            // Arrange
-            var specialist = new Specialist(3, "Alice", "Johnson", "alice.johnson@example.com", new DateTime(1995, 3, 15), "Pass456", "+38(066)1264567", 150.0);
-            var order = new Order(2, ServiceCategory.Design, "Design logo", 100.0, "456 Elm St", OrderStatus.InProgress, null, null);
-
             // Act
+            specialist.ApplyForOrder(order);
             specialist.CompleteOrder(order);
+            
 
             // Assert
             Assert.AreEqual(OrderStatus.Completed, order.Status);
+            Assert.AreEqual(250.0, specialist.Balance); // 150 + 100 = 250
+            Assert.AreEqual(200.0, customer.Balance);   // 300 - 100 = 200
         }
 
         [TestMethod]
+        [DoNotParallelize]
         public void GetName()
         {
-            Assert.AreEqual("John", specialist.GetName());
+            Assert.AreEqual("Alice", specialist.Name);
         }
 
         [TestMethod]
-        public void GetSurnamee()
+        [DoNotParallelize]
+        public void GetSurname()
         {
-            Assert.AreEqual("Doe", specialist.GetSurname());
+            Assert.AreEqual("Johnson", specialist.Surname);
         }
 
         [TestMethod]
+        [DoNotParallelize]
         public void GetEmail()
         {
-            Assert.AreEqual("john.doe@example.com", specialist.GetEmail());
+            Assert.AreEqual("alice.johnson@example.com", specialist.Email);
         }
 
         [TestMethod]
+        [DoNotParallelize]
         public void GetDateOfBirth()
         {
-            Assert.AreEqual(new DateTime(1988, 5, 22), specialist.GetDateOfBirth());
+            Assert.AreEqual(new DateTime(1995, 3, 15), specialist.DateOfBirth);
         }
 
         [TestMethod]
+        [DoNotParallelize]
         public void GetPassword()
         {
-            Assert.AreEqual("securePass789", specialist.GetPassword());
+            Assert.AreEqual("Pass456", specialist.Password);
         }
 
         [TestMethod]
+        [DoNotParallelize]
         public void GetPhoneNumber()
         {
-            Assert.AreEqual("+38(067)9876543", specialist.GetPhoneNumber());
+            Assert.AreEqual("+38(066)1264567", specialist.PhoneNumber);
         }
 
         [TestMethod]
+        [DoNotParallelize]
         public void GetBalance()
         {
-            Assert.AreEqual(500.00, specialist.GetBalance());
+            Assert.AreEqual(150.0, specialist.Balance);
         }
     }
 }

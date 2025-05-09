@@ -1,83 +1,104 @@
 ﻿using Service_order_service;
+using System.Text.Json;
+using System.Windows.Controls;
 
 namespace Test_OOP_Project
 {
     [TestClass]
     public sealed class AdminTests
     {
-        private Admin admin;
+        private Admin admin = null!;
 
         [TestInitialize]
         public void Setup()
         {
-            admin = new Admin(1, "Admin", "User", "admin@example.com", new DateTime(1990, 1, 1), "password", "+38(066)9234567", 0);
+            var customer = new Customer(2, "Jane", "Smith", "jane.smith@example.com", new DateTime(1985, 8, 10), "Pass123", "+38(066)2234567", 200.0);
+            var order = new Order(10, "Fix plumbing", ServiceCategory.HomeRepair, "Fix plumbing in the kitchen", 50.0, "123 Main St", new DateTime(2025, 12, 31), PaymentTerm.Prepayment, OrderStatus.Pending, customer, null);
+            admin = new Admin(1, "Eve", "Johnson", "eve.johnson@example.com", new DateTime(1990, 6, 12), "adminPass123", "+38(050)5555555", 1000.00);
+            var ordersJson = JsonSerializer.Serialize(new List<Order> { order });
+            File.WriteAllText("orders.json", ordersJson);
         }
 
         [TestMethod]
+        [DoNotParallelize]
         public void BlockUser()
         {
             int userId = 2;
             admin.BlockUser(userId);
 
-            Assert.IsTrue(admin.IsUserBlocked(userId), "Користувач має бути заблокований.");
+            Assert.IsTrue(admin.IsUserBlocked(userId), "User should be blocked.");
         }
 
         [TestMethod]
+        [DoNotParallelize]
         public void UnblockUser()
         {
             int userId = 3;
             admin.BlockUser(userId);
             admin.UnblockUser(userId);
 
-            Assert.IsFalse(admin.IsUserBlocked(userId), "Користувач має бути розблокований.");
+            Assert.IsFalse(admin.IsUserBlocked(userId), "User should be unblocked.");
         }
 
         [TestMethod]
+        [DoNotParallelize]
         public void DeleteOrder()
         {
-            Assert.ThrowsException<NotImplementedException>(() => admin.DeleteOrder(101, "Canceled"));
+            // Act
+            admin.DeleteOrder(10);
+
+            // Assert
+            bool isDeleted = admin.IsOrderDeleted(10);
+            Assert.IsTrue(isDeleted, $"Order with ID {10} should be deleted.");
         }
 
         [TestMethod]
+        [DoNotParallelize]
         public void GetName()
         {
-            Assert.AreEqual("Eve", admin.GetName());
+            Assert.AreEqual("Eve", admin.Name);
         }
 
         [TestMethod]
+        [DoNotParallelize]
         public void GetSurname()
         {
-            Assert.AreEqual("Johnson", admin.GetSurname());
+            Assert.AreEqual("Johnson", admin.Surname);
         }
 
         [TestMethod]
+        [DoNotParallelize]
         public void GetEmail()
         {
-            Assert.AreEqual("eve.johnson@example.com", admin.GetEmail());
+            Assert.AreEqual("eve.johnson@example.com", admin.Email);
         }
 
         [TestMethod]
+        [DoNotParallelize]
         public void GetDateOfBirth()
         {
-            Assert.AreEqual(new DateTime(1990, 6, 12), admin.GetDateOfBirth());
+            Assert.AreEqual(new DateTime(1990, 6, 12), admin.DateOfBirth);
         }
 
         [TestMethod]
+        [DoNotParallelize]
         public void GetPassword()
         {
-            Assert.AreEqual("adminPass123", admin.GetPassword());
+            Assert.AreEqual("adminPass123", admin.Password);
         }
 
         [TestMethod]
+        [DoNotParallelize]
         public void GetPhoneNumber()
         {
-            Assert.AreEqual("+38(050)5555555", admin.GetPhoneNumber());
+            Assert.AreEqual("+38(050)5555555", admin.PhoneNumber);
         }
 
         [TestMethod]
+        [DoNotParallelize]
         public void GetBalance()
         {
-            Assert.AreEqual(1000.00, admin.GetBalance());
+            Assert.AreEqual(1000.00, admin.Balance);
         }
     }
 }

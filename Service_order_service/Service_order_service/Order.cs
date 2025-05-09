@@ -1,74 +1,171 @@
-﻿namespace Service_order_service
+﻿using System.Text.Json;
+using System.Text.Json.Serialization;
+using System.IO;
+
+namespace Service_order_service
 {
-    public class Order
+    public class Order : IOrderManagement
     {
-        public int OrderId;
-        public ServiceCategory Category;
-        public string? Description;
-        public double Price;
-        public string? Location;
-        public OrderStatus Status;
-        public Customer? Customer;
-        public Specialist? Specialist;
+        private int _orderId;
+        private string? _title;
+        private ServiceCategory _category;
+        private string? _description;
+        private double _price;
+        private string? _location;
+        private DateTime _deadline;
+        private PaymentTerm _paymentTerm;
+        private OrderStatus _status;
+        private Customer? _customer;
+        private Specialist? _specialist;
 
-        public Order(int orderId, ServiceCategory category, string? description, double price, string? location, OrderStatus status, Customer? customer, Specialist? specialist)
+        public int OrderId
         {
-            throw new NotImplementedException();
+            get => _orderId;
+            set => _orderId = value;
         }
 
-        public ServiceCategory GetCategory()
+        public string? Title
         {
-            throw new NotImplementedException();
+            get => _title;
+            set => _title = !string.IsNullOrWhiteSpace(value)
+                ? value
+                : throw new ArgumentException("Title cannot be empty.");
         }
 
-        public string? GetDescription()
+        public ServiceCategory Category
         {
-            throw new NotImplementedException();
+            get => _category;
+            set => _category = Enum.IsDefined(typeof(ServiceCategory), value)
+                ? value
+                : throw new ArgumentException("Invalid service category.");
         }
 
-        public double GetPrice()
+        public string? Description
         {
-            throw new NotImplementedException();
+            get => _description;
+            set => _description = !string.IsNullOrWhiteSpace(value)
+                ? value
+                : throw new ArgumentException("Description cannot be empty.");
         }
 
-        public string? GetLocation()
+        public double Price
         {
-            throw new NotImplementedException();
+            get => _price;
+            set => _price = value >= 0
+                ? value
+                : throw new ArgumentException("Price cannot be negative.");
         }
 
-        public OrderStatus GetStatus()
+        public string? Location
         {
-            throw new NotImplementedException();
+            get => _location;
+            set => _location = !string.IsNullOrWhiteSpace(value)
+                ? value
+                : throw new ArgumentException("Location cannot be empty.");
         }
 
-        public Customer? GetCustomer()
+        [JsonIgnore]
+        public DateTime Deadline
         {
-            throw new NotImplementedException();
+            get => _deadline;
+            set
+            {
+                if (value <= DateTime.Now)
+                    throw new ArgumentException("Deadline must be a future date.");
+                _deadline = value;
+            }
         }
 
-        public Specialist? GetSpecialist()
+        [JsonPropertyName("Deadline")]
+        public DateTime DeadlineForJson
         {
-            throw new NotImplementedException();
+            get => _deadline;
+            set => _deadline = value;
         }
 
-        public void Publish() 
-        { 
-            throw new NotImplementedException(); 
+        public PaymentTerm PaymentTerm
+        {
+            get => _paymentTerm;
+            set => _paymentTerm = Enum.IsDefined(typeof(PaymentTerm), value)
+                ? value
+                : throw new ArgumentException("Invalid payment term.");
+        }
+
+        public OrderStatus Status
+        {
+            get => _status;
+            set => _status = Enum.IsDefined(typeof(OrderStatus), value)
+                ? value
+                : throw new ArgumentException("Invalid order status.");
+        }
+
+        public Customer? Customer
+        {
+            get => _customer;
+            set => _customer = value ?? throw new ArgumentNullException(nameof(Customer), "Customer cannot be null.");
+        }
+
+        public Specialist? Specialist
+        {
+            get => _specialist;
+            set => _specialist = value;
+        }
+
+        public Order() { }
+
+        public Order(
+            int orderId,
+            string? title,
+            ServiceCategory category,
+            string? description,
+            double price,
+            string? location,
+            DateTime deadline,
+            PaymentTerm paymentTerm,
+            OrderStatus status,
+            Customer? customer,
+            Specialist? specialist)
+        {
+            OrderId = orderId;
+            Title = title;
+            Category = category;
+            Description = description;
+            Price = price;
+            Location = location;
+            Deadline = deadline;
+            PaymentTerm = paymentTerm;
+            Status = status;
+            Customer = customer;
+            Specialist = specialist;
+        }
+
+        public void Publish()
+        {
+            var orders = JsonStorageService.LoadFromFile<Order>("orders.json");
+            orders.Add(this);
+            JsonStorageService.SaveToFile("orders.json", orders);
         }
 
         public void Edit(string newDescription, double newPrice)
         {
-            throw new NotImplementedException();
-        }
+            var orders = JsonStorageService.LoadFromFile<Order>("orders.json");
+            var existingOrder = orders.FirstOrDefault(o => o.OrderId == this.OrderId);
 
-        public void Cancel()
-        {
-            throw new NotImplementedException();
-        }
+            if (existingOrder == null)
+                throw new InvalidOperationException("Order not found.");
 
-        public void Complete()
-        {
-            throw new NotImplementedException();
+            if (existingOrder.Status == OrderStatus.Completed)
+                throw new InvalidOperationException("Cannot edit a completed order.");
+
+            if (existingOrder.Status == OrderStatus.Canceled)
+                throw new InvalidOperationException("Cannot edit a canceled order.");
+
+            existingOrder.Description = newDescription;
+            this.Description = newDescription;
+            existingOrder.Price = newPrice;
+            this.Price = newPrice;
+
+            JsonStorageService.SaveToFile("orders.json", orders);
         }
     }
 }

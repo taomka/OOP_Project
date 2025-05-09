@@ -1,172 +1,133 @@
 ﻿using Service_order_service;
+using System.Text.Json;
 
 namespace Test_OOP_Project
 {
     [TestClass]
     public sealed class OrderTests
     {
-        private Order order;
-        private Customer customer;
-        private Specialist specialist;
+        private Order order = null!;
+        private Customer customer = null!;
+        private Specialist specialist = null!;
 
         [TestInitialize]
         public void Setup()
         {
-            customer = new Customer(1, "John", "Doe", "john@example.com", new DateTime(1990, 1, 1), "password", "+38(066)8234567", 100.0);
+            customer = new Customer(1, "John", "Doe", "john@example.com", new DateTime(1990, 1, 1), "password", "+38(066)8234567", 300.0);
             specialist = new Specialist(2, "Jane", "Smith", "jane@example.com", new DateTime(1985, 5, 15), "password", "+38(066)1234667", 200.0);
 
-            order = new Order(1, ServiceCategory.IT, "Fix laptop", 150.0, "NYC", OrderStatus.Pending, customer, specialist);
+            order = new Order(1, "Fix laptop", ServiceCategory.IT, "Fix laptop after fire", 150.0, "NYC", new DateTime(2025, 12, 31),
+                              PaymentTerm.Prepayment, OrderStatus.InProgress, customer, specialist);
+            var ordersJson = JsonSerializer.Serialize(new List<Order> { order });
+            File.WriteAllText("orders.json", ordersJson);
         }
 
         [TestMethod]
-        public void Publish_ChangeStatusToInProgress()
+        [DoNotParallelize]
+        public void Edit()
         {
-            // Arrange
-            order.Publish();
-
-            // Act & Assert
-            Assert.AreEqual(OrderStatus.InProgress, order.GetStatus());
-        }
-
-        [TestMethod]
-        public void Publish_NotChangeStatus()
-        {
-            // Arrange
-            order.Status = OrderStatus.Completed;
-
             // Act
-            order.Publish();
+            order.Edit("Repair screen", 200.0);
 
             // Assert
-            Assert.AreEqual(OrderStatus.Completed, order.GetStatus());
+            Assert.AreEqual("Repair screen", order.Description);
+            Assert.AreEqual(200.0, order.Price);
         }
 
         [TestMethod]
-        public void Edit_UpdateDescriptionAndPrice()
+        [DoNotParallelize]
+        [ExpectedException(typeof(InvalidOperationException))]
+        public void Edit_Throw_WhenOrderIsCompleted()
         {
-            // Arrange
-            string newDescription = "Repair laptop screen";
-            double newPrice = 200.0;
+            specialist.CompleteOrder(order);
+            order.Edit("Try edit", 100.0);
+        }
 
+        [TestMethod]
+        [DoNotParallelize]
+        [ExpectedException(typeof(InvalidOperationException))]
+        public void Edit_Throw_WhenOrderIsCanceled()
+        {
+            customer.CancelOrder(order);
+            order.Edit("Try edit", 100.0);
+        }
+
+        [TestMethod]
+        [DoNotParallelize]
+        public void Cancel()
+        {
             // Act
-            order.Edit(newDescription, newPrice);
+            customer.CancelOrder(order);
 
             // Assert
-            Assert.AreEqual(newDescription, order.GetDescription());
-            Assert.AreEqual(newPrice, order.GetPrice());
+            Assert.AreEqual(OrderStatus.Canceled, order.Status);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(InvalidOperationException))]
-        public void Edit_ThrowException_OrderIsCompleted()
+        [DoNotParallelize]
+        public void Complete()
         {
-            // Arrange
-            order.Status = OrderStatus.Completed;
-
             // Act
-            order.Edit("New description", 250.0);
+            specialist.CompleteOrder(order);
+
+            // Assert
+            Assert.AreEqual(OrderStatus.Completed, order.Status);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(InvalidOperationException))]
-        public void Edit_ThrowException_WhenOrderIsCanceled()
-        {
-            // Arrange
-            order.Status = OrderStatus.Canceled;
-
-            // Act
-            order.Edit("New description", 250.0);
-        }
-
-        [TestMethod]
-        public void Cancel_ChangeStatusToCanceled()
-        {
-            // Arrange
-            order.Cancel();
-
-            // Act & Assert
-            Assert.AreEqual(OrderStatus.Canceled, order.GetStatus());
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(InvalidOperationException))]
-        public void Cancel_ThrowException_WhenOrderIsCompleted()
-        {
-            // Arrange
-            order.Status = OrderStatus.Completed;
-
-            // Act
-            order.Cancel();
-        }
-
-        [TestMethod]
-        public void Complete_ChangeStatusToCompleted()
-        {
-            // Arrange
-            order.Complete();
-
-            // Act & Assert
-            Assert.AreEqual(OrderStatus.Completed, order.GetStatus());
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(InvalidOperationException))]
-        public void Complete_ThrowException_WhenOrderIsCanceled()
-        {
-            // Arrange
-            order.Status = OrderStatus.Canceled;
-
-            // Act
-            order.Complete();
-        }
-
-        [TestMethod]
+        [DoNotParallelize]
         public void GetCategory()
         {
             // Act & Assert
-            Assert.AreEqual(ServiceCategory.IT, order.GetCategory());
+            Assert.AreEqual(ServiceCategory.IT, order.Category);
         }
 
         [TestMethod]
+        [DoNotParallelize]
         public void GetDescription()
         {
             // Act & Assert
-            Assert.AreEqual("Fix laptop", order.GetDescription());
+            Assert.AreEqual("Fix laptop after fire", order.Description);
         }
 
         [TestMethod]
+        [DoNotParallelize]
         public void GetPrice()
         {
             // Act & Assert
-            Assert.AreEqual(150.0, order.GetPrice());
+            Assert.AreEqual(150.0, order.Price);
         }
 
         [TestMethod]
+        [DoNotParallelize]
         public void GetLocation()
         {
             // Act & Assert
-            Assert.AreEqual("NYC", order.GetLocation());
+            Assert.AreEqual("NYC", order.Location);
         }
 
         [TestMethod]
+        [DoNotParallelize]
         public void GetStatus()
         {
             // Act & Assert
-            Assert.AreEqual(OrderStatus.Pending, order.GetStatus());
+            Assert.AreEqual(OrderStatus.InProgress, order.Status);
         }
 
         [TestMethod]
+        [DoNotParallelize]
         public void GetCustomer()
         {
             // Act & Assert
-            Assert.AreEqual(customer, order.GetCustomer());
+            Assert.AreEqual(customer, order.Customer);
         }
 
         [TestMethod]
+        [DoNotParallelize]
         public void GetSpecialist()
         {
             // Act & Assert
-            Assert.AreEqual(specialist, order.GetSpecialist());
+            Assert.AreEqual(specialist, order.Specialist);
         }
     }
 }
