@@ -1,6 +1,4 @@
-﻿using System.Text.Json;
-using System.Text.Json.Serialization;
-using System.IO;
+﻿using System.Text.Json.Serialization;
 
 namespace Service_order_service
 {
@@ -141,19 +139,15 @@ namespace Service_order_service
 
         public void Publish()
         {
-            var orders = JsonStorageService.LoadFromFile<Order>("orders.json");
+            var orders = JsonStorageService.LoadFromFile<Order>("F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\orders.json");
             orders.Add(this);
-            JsonStorageService.SaveToFile("orders.json", orders);
+            JsonStorageService.SaveToFile("F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\orders.json", orders);
         }
 
         public void Edit(string newDescription, double newPrice)
         {
-            var orders = JsonStorageService.LoadFromFile<Order>("orders.json");
-            var existingOrder = orders.FirstOrDefault(o => o.OrderId == this.OrderId);
-
-            if (existingOrder == null)
-                throw new InvalidOperationException("Order not found.");
-
+            var orders = JsonStorageService.LoadFromFile<Order>("F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\orders.json");
+            var existingOrder = orders.FirstOrDefault(o => o.OrderId == this.OrderId) ?? throw new InvalidOperationException("Order not found.");
             if (existingOrder.Status == OrderStatus.Completed)
                 throw new InvalidOperationException("Cannot edit a completed order.");
 
@@ -165,7 +159,7 @@ namespace Service_order_service
             existingOrder.Price = newPrice;
             this.Price = newPrice;
 
-            JsonStorageService.SaveToFile("orders.json", orders);
+            JsonStorageService.SaveToFile("F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\orders.json", orders);
         }
     }
 }

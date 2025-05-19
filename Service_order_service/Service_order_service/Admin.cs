@@ -2,7 +2,9 @@
 {
     public class Admin : User, IUserManagement
     {
-        public override string GetUserFileName() => "admins.json";
+        public override string GetUserFileName() => "F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\admins.json";
+
+        public Admin() { }
 
         public Admin(int userId, string name, string surname, string email, DateTime dateOfBirth, string password, string phoneNumber, double balance)
         {
@@ -16,92 +18,130 @@
             Balance = balance;
         }
 
-        public void BlockUser(int userId)
+        public static void BlockUser(int userId)
         {
-            var blockedUsers = JsonStorageService.LoadFromFile<int>("blocked_users.json");
+            var blockedUsers = JsonStorageService.LoadFromFile<int>("F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\blocked_users.json");
             if (!blockedUsers.Contains(userId))
             {
                 blockedUsers.Add(userId);
-                JsonStorageService.SaveToFile("blocked_users.json", blockedUsers);
+                JsonStorageService.SaveToFile("F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\blocked_users.json", blockedUsers);
             }
         }
 
-        public void UnblockUser(int userId)
+        public static void UnblockUser(int userId)
         {
-            var blockedUsers = JsonStorageService.LoadFromFile<int>("blocked_users.json");
-            if (blockedUsers.Contains(userId))
+            var blockedUsers = JsonStorageService.LoadFromFile<int>("F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\blocked_users.json");
+            if (blockedUsers.Remove(userId))
             {
-                blockedUsers.Remove(userId);
-                JsonStorageService.SaveToFile("blocked_users.json", blockedUsers);
+                JsonStorageService.SaveToFile("F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\blocked_users.json", blockedUsers);
             }
         }
 
-        public bool IsUserBlocked(int userId)
+        public static bool IsUserBlocked(int userId)
         {
-            var blockedUsers = JsonStorageService.LoadFromFile<int>("blocked_users.json");
+            var blockedUsers = JsonStorageService.LoadFromFile<int>("F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\blocked_users.json");
             return blockedUsers.Contains(userId);
         }
 
-        public void DeleteOrder(int orderId)
+        public static void DeleteOrder(int orderId)
         {
-            var orders = JsonStorageService.LoadFromFile<Order>("orders.json");
-            var orderToRemove = orders.FirstOrDefault(o => o.OrderId == orderId);
-            if (orderToRemove == null)
-                throw new InvalidOperationException($"Order with ID {orderId} not found.");
-
+            var orders = JsonStorageService.LoadFromFile<Order>("F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\orders.json");
+            var orderToRemove = orders.FirstOrDefault(o => o.OrderId == orderId) ?? throw new InvalidOperationException($"Order with ID {orderId} not found.");
             orders.Remove(orderToRemove);
-            JsonStorageService.SaveToFile("orders.json", orders);
+            JsonStorageService.SaveToFile("F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\orders.json", orders);
         }
 
-        public bool IsOrderDeleted(int orderId)
+        public static bool IsOrderDeleted(int orderId)
         {
-            var orders = JsonStorageService.LoadFromFile<Order>("orders.json");
+            var orders = JsonStorageService.LoadFromFile<Order>("F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\orders.json");
             return !orders.Any(o => o.OrderId == orderId);
         }
 
         public void AddUser(User user)
         {
-            if (user == null)
-                throw new ArgumentNullException(nameof(user));
+            ArgumentNullException.ThrowIfNull(user);
 
-            var users = JsonStorageService.LoadFromFile<User>(user.GetUserFileName());
-            users.Add(user);
-            JsonStorageService.SaveToFile(user.GetUserFileName(), users);
+            if (user.UserId == 0)
+                user.UserId = user._userId;
+
+            if (user is Customer customer)
+            {
+                var customers = JsonStorageService.LoadFromFile<Customer>(customer.GetUserFileName());
+                if (customers.Any(u => u.UserId == customer.UserId))
+                    throw new InvalidOperationException($"User with ID {user.UserId} already exists.");
+                customers.Add(customer);
+                JsonStorageService.SaveToFile(user.GetUserFileName(), customers);
+            }
+
+            if (user is Specialist specialist)
+            {
+                var specialists = JsonStorageService.LoadFromFile<Specialist>(specialist.GetUserFileName());
+                if (specialists.Any(u => u.UserId == specialist.UserId))
+                    throw new InvalidOperationException($"User with ID {user.UserId} already exists.");
+                specialists.Add(specialist);
+                JsonStorageService.SaveToFile(user.GetUserFileName(), specialists);
+            }
         }
 
         public void RemoveUser(User user)
         {
-            if (user == null)
-                throw new ArgumentNullException(nameof(user));
+            ArgumentNullException.ThrowIfNull(user);
 
-            var users = JsonStorageService.LoadFromFile<User>(user.GetUserFileName());
-            var existing = users.FirstOrDefault(u => u._userId == user._userId);
-            if (existing != null)
+            if (user is Customer customer)
             {
-                users.Remove(existing);
-                JsonStorageService.SaveToFile(user.GetUserFileName(), users);
+                var customers = JsonStorageService.LoadFromFile<Customer>(customer.GetUserFileName());
+                var existing = customers.FirstOrDefault(u => u._userId == customer._userId);
+                if (existing != null)
+                {
+                    customers.Remove(existing);
+                    JsonStorageService.SaveToFile(user.GetUserFileName(), customers);
+                }
+            }
+            if (user is Specialist specialist)
+            {
+                var specialists = JsonStorageService.LoadFromFile<Specialist>(specialist.GetUserFileName());
+                var existing = specialists.FirstOrDefault(u => u._userId == specialist._userId);
+                if (existing != null)
+                {
+                    specialists.Remove(existing);
+                    JsonStorageService.SaveToFile(user.GetUserFileName(), specialists);
+                }
             }
         }
 
-        public void UpdateUser(int userId, string? newPassword = null, string? newPhoneNumber = null)
+        public void UpdateCustomer(int userId, string? newPassword = null, string? newPhoneNumber = null)
         {
-            var files = new[] { "customers.json", "specialists.json", "admins.json" };
+            const string file = "F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\customers.json";
 
-            foreach (var file in files)
+            var customers = JsonStorageService.LoadFromFile<Customer>(file);
+            var existingCustomer = customers.FirstOrDefault(c => c.UserId == userId);
+            if (existingCustomer != null)
             {
-                var users = JsonStorageService.LoadFromFile<User>(file);
-                var existingUser = users.FirstOrDefault(u => u._userId == userId);
-                if (existingUser != null)
-                {
-                    if (!string.IsNullOrWhiteSpace(newPassword))
-                        existingUser.Password = newPassword;
+                if (!string.IsNullOrWhiteSpace(newPassword))
+                    existingCustomer.Password = newPassword;
 
-                    if (!string.IsNullOrWhiteSpace(newPhoneNumber))
-                        existingUser.PhoneNumber = newPhoneNumber;
+                if (!string.IsNullOrWhiteSpace(newPhoneNumber))
+                    existingCustomer.PhoneNumber = newPhoneNumber;
 
-                    JsonStorageService.SaveToFile(file, users);
-                    break;
-                }
+                JsonStorageService.SaveToFile(file, customers);
+            }
+        }
+
+        public void UpdateSpecialist(int userId, string? newPassword = null, string? newPhoneNumber = null)
+        {
+            const string file = "F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\specialists.json";
+
+            var specialists = JsonStorageService.LoadFromFile<Specialist>(file);
+            var existingSpecialist = specialists.FirstOrDefault(s => s.UserId == userId);
+            if (existingSpecialist != null)
+            {
+                if (!string.IsNullOrWhiteSpace(newPassword))
+                    existingSpecialist.Password = newPassword;
+
+                if (!string.IsNullOrWhiteSpace(newPhoneNumber))
+                    existingSpecialist.PhoneNumber = newPhoneNumber;
+
+                JsonStorageService.SaveToFile(file, specialists);
             }
         }
     }

@@ -1,0 +1,91 @@
+﻿<Window x:Class="Service_order_service.MyProfileWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Service_order_service" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Service Order Service" Height="1080" Width="1920" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DockPanel Background="#73E76E" Height="60" VerticalAlignment="Top">
+            <TextBlock Text="Service Order Service" 
+           VerticalAlignment="Center"
+           Margin="10,0,0,0"
+           FontSize="18"
+           FontWeight="Bold"
+           DockPanel.Dock="Left"/>
+            <Button x:Name="CreateOrderButton"
+            Content="Create Order"
+            Foreground="Black" Background="White"
+            Style="{StaticResource MaterialDesignOutlinedButton}"
+            Margin="10"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Visibility="Collapsed"
+            Click="Button_CreateOrder"/>
+
+            <Button x:Name="MainPageButton"
+            Content="Main Page"
+            Foreground="Black" Background="White"
+            Margin="10"
+            Style="{StaticResource MaterialDesignOutlinedButton}" 
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Click="Button_MainPage"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" DockPanel.Dock="Right" VerticalAlignment="Center" Margin="0,0,10,0">
+                <Button Content="My Profile" Foreground="Black" Background="White"
+                Style="{StaticResource MaterialDesignOutlinedButton}"
+                Margin="5,0,0,0"
+                VerticalAlignment="Center" Click="Button_MyProfile"/>
+                <Button x:Name="ViewOrdersButton"
+                Content="My Orders"
+                Foreground="Black" Background="White"
+                Style="{StaticResource MaterialDesignOutlinedButton}"
+                Margin="5,0,0,0"
+                Visibility="Collapsed"
+                VerticalAlignment="Center"
+                Click="Button_ViewOrders"/>
+            </StackPanel>
+        </DockPanel>
+        <Border MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="30" MaxWidth="550" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="20" ShadowDepth="0" Color="#ff000000" Opacity="0.2"/>
+            </Border.Effect>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" >
+
+                <StackPanel Orientation="Vertical" Margin="0,10">
+                    <TextBlock x:Name="BalanceTextBlock" Text="My balance: 0 UAH" FontSize="16" VerticalAlignment="Center"/>
+
+                    <TextBox x:Name="TopUpAmountTextBox"
+                             materialDesign:HintAssist.Hint="Enter amount"
+                             Margin="0,10,0,0"
+                             Height="35" />
+
+                    <Button Content="Top Up"
+                            Background="#74EE74"
+                            Foreground="Black"
+                            Margin="0,10,0,0"
+                            Click="Button_Recharge"
+                            Height="35"/>
+                </StackPanel>
+
+                <Border BorderBrush="Gray" BorderThickness="1" Width="200" Height="200" Margin="0,10" HorizontalAlignment="Center">
+                    <Image x:Name="AvatarImage" Stretch="UniformToFill"/>
+                </Border>
+                <Button Content="Choose Photo" Background="#74EE74" Foreground="Black" Width="150" Margin="0,10" Click="ChoosePhotoButton_Click" HorizontalAlignment="Center"/>
+
+                <TextBox x:Name="NewPasswordTextBox" materialDesign:HintAssist.Hint="New Password" Margin="0,10"/>
+                <TextBox x:Name="RepeatPasswordTextBox" materialDesign:HintAssist.Hint="Repeat New Password" Margin="0,0,0,10"/>
+                <Button Content="Change Password" Background="#74EE74" Foreground="Black" Width="150" Click="Button_ChangePassword" HorizontalAlignment="Center"/>
+                
+                <Button Content="Log Out"
+                        Background="Red"
+                        Foreground="White"
+                        Height="35"
+                        Margin="0,10"
+                        Click="LogoutButton_Click" FontSize="18" />
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
