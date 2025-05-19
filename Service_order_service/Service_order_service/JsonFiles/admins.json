@@ -1,0 +1,13 @@
+[
+  {
+    "UserId": 0,
+    "AvatarPath": "C:\\Users\\fakedoring\\Pictures\\10000046.541a1aa7..png",
+    "Name": "Mike",
+    "Surname": "Kovalenko",
+    "Email": "qwer123@gmail.com",
+    "DateOfBirth": "2006-03-27T00:00:00",
+    "Password": "123456",
+    "PhoneNumber": "\u002B38(099)4516952",
+    "Balance": 1000
+  }
+]

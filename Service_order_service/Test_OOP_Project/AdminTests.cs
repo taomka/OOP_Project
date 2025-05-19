@@ -1,6 +1,5 @@
 ﻿using Service_order_service;
 using System.Text.Json;
-using System.Windows.Controls;
 
 namespace Test_OOP_Project
 {
@@ -24,9 +23,9 @@ namespace Test_OOP_Project
         public void BlockUser()
         {
             int userId = 2;
-            admin.BlockUser(userId);
+            Admin.BlockUser(userId);
 
-            Assert.IsTrue(admin.IsUserBlocked(userId), "User should be blocked.");
+            Assert.IsTrue(Admin.IsUserBlocked(userId), "User should be blocked.");
         }
 
         [TestMethod]
@@ -34,10 +33,10 @@ namespace Test_OOP_Project
         public void UnblockUser()
         {
             int userId = 3;
-            admin.BlockUser(userId);
-            admin.UnblockUser(userId);
+            Admin.BlockUser(userId);
+            Admin.UnblockUser(userId);
 
-            Assert.IsFalse(admin.IsUserBlocked(userId), "User should be unblocked.");
+            Assert.IsFalse(Admin.IsUserBlocked(userId), "User should be unblocked.");
         }
 
         [TestMethod]
@@ -45,10 +44,10 @@ namespace Test_OOP_Project
         public void DeleteOrder()
         {
             // Act
-            admin.DeleteOrder(10);
+            Admin.DeleteOrder(10);
 
             // Assert
-            bool isDeleted = admin.IsOrderDeleted(10);
+            bool isDeleted = Admin.IsOrderDeleted(10);
             Assert.IsTrue(isDeleted, $"Order with ID {10} should be deleted.");
         }
 

@@ -1,0 +1,238 @@
+[
+  {
+    "OrderId": 2,
+    "Title": "asdfasdfasdf",
+    "Category": 0,
+    "Description": "asdfasdf",
+    "Price": 1,
+    "Location": "asdfasdfasdff",
+    "Deadline": "2025-05-30T00:00:00",
+    "PaymentTerm": 0,
+    "Status": 3,
+    "Customer": {
+      "UserId": 0,
+      "AvatarPath": "C:\\Users\\fakedoring\\Pictures\\23.jpg",
+      "Name": "Mike",
+      "Surname": "Kovalenko",
+      "Email": "qwer123@gmail.com",
+      "DateOfBirth": "2006-03-27T00:00:00",
+      "Password": "1234567",
+      "PhoneNumber": "\u002B38(099)4516952",
+      "Balance": 700
+    },
+    "Specialist": null
+  },
+  {
+    "OrderId": 3,
+    "Title": "qwerqwer",
+    "Category": 0,
+    "Description": "qwerqwerqwer",
+    "Price": 1,
+    "Location": "qwerqwerr",
+    "Deadline": "2025-05-30T00:00:00",
+    "PaymentTerm": 0,
+    "Status": 2,
+    "Customer": {
+      "UserId": 0,
+      "AvatarPath": "C:\\Users\\fakedoring\\Pictures\\23.jpg",
+      "Name": "Mike",
+      "Surname": "Kovalenko",
+      "Email": "qwer123@gmail.com",
+      "DateOfBirth": "2006-03-27T00:00:00",
+      "Password": "1234567",
+      "PhoneNumber": "\u002B38(099)4516952",
+      "Balance": 699
+    },
+    "Specialist": {
+      "Ratings": null,
+      "AverageRating": 0,
+      "UserId": 0,
+      "AvatarPath": "C:\\Users\\fakedoring\\Pictures\\05cc3b9ff79e04cf55fb40e3a261f708.jpg",
+      "Name": "Mike",
+      "Surname": "Kovalenko",
+      "Email": "qwer123@gmail.com",
+      "DateOfBirth": "2006-03-27T00:00:00",
+      "Password": "123456",
+      "PhoneNumber": "\u002B38(099)4516952",
+      "Balance": 100
+    }
+  },
+  {
+    "OrderId": 4,
+    "Title": "zxcv",
+    "Category": 0,
+    "Description": "zxcvzxcv",
+    "Price": 1,
+    "Location": "zxcvzxcvv",
+    "Deadline": "2025-05-28T00:00:00",
+    "PaymentTerm": 0,
+    "Status": 0,
+    "Customer": {
+      "UserId": 0,
+      "AvatarPath": "C:\\Users\\fakedoring\\Pictures\\23.jpg",
+      "Name": "Mike",
+      "Surname": "Kovalenko",
+      "Email": "qwer123@gmail.com",
+      "DateOfBirth": "2006-03-27T00:00:00",
+      "Password": "1234567",
+      "PhoneNumber": "\u002B38(099)4516952",
+      "Balance": 700
+    },
+    "Specialist": null
+  },
+  {
+    "OrderId": 5,
+    "Title": "Hello",
+    "Category": 1,
+    "Description": "HelloYes",
+    "Price": 1,
+    "Location": "Kharkiv",
+    "Deadline": "2025-05-23T00:00:00",
+    "PaymentTerm": 0,
+    "Status": 0,
+    "Customer": {
+      "UserId": 0,
+      "AvatarPath": "C:\\Users\\fakedoring\\Pictures\\23.jpg",
+      "Name": "Mike",
+      "Surname": "Kovalenko",
+      "Email": "qwer123@gmail.com",
+      "DateOfBirth": "2006-03-27T00:00:00",
+      "Password": "1234567",
+      "PhoneNumber": "\u002B38(099)4516952",
+      "Balance": 700
+    },
+    "Specialist": null
+  },
+  {
+    "OrderId": 1,
+    "Title": "fghj",
+    "Category": 0,
+    "Description": "rtyufgm",
+    "Price": 1,
+    "Location": "bnmgghjk",
+    "Deadline": "2025-05-28T00:00:00",
+    "PaymentTerm": 0,
+    "Status": 2,
+    "Customer": {
+      "UserId": 0,
+      "AvatarPath": "C:\\Users\\fakedoring\\Pictures\\23.jpg",
+      "Name": "Mike",
+      "Surname": "Kovalenko",
+      "Email": "qwer123@gmail.com",
+      "DateOfBirth": "2006-03-27T00:00:00",
+      "Password": "1234567",
+      "PhoneNumber": "\u002B38(099)4516952",
+      "Balance": 700
+    },
+    "Specialist": null
+  },
+  {
+    "OrderId": 1,
+    "Title": "cxvndcfhs",
+    "Category": 0,
+    "Description": "chmvghj,m",
+    "Price": 1,
+    "Location": "sdhcmn",
+    "Deadline": "2025-05-27T00:00:00",
+    "PaymentTerm": 0,
+    "Status": 0,
+    "Customer": {
+      "UserId": 0,
+      "AvatarPath": "C:\\Users\\fakedoring\\Pictures\\23.jpg",
+      "Name": "Mike",
+      "Surname": "Kovalenko",
+      "Email": "qwer123@gmail.com",
+      "DateOfBirth": "2006-03-27T00:00:00",
+      "Password": "1234567",
+      "PhoneNumber": "\u002B38(099)4516952",
+      "Balance": 700
+    },
+    "Specialist": null
+  },
+  {
+    "OrderId": 1,
+    "Title": "xzcvbnsdeg",
+    "Category": 0,
+    "Description": "xcvnxcfhasg",
+    "Price": 1,
+    "Location": "sdbnncm",
+    "Deadline": "2025-05-29T00:00:00",
+    "PaymentTerm": 0,
+    "Status": 0,
+    "Customer": {
+      "UserId": 0,
+      "AvatarPath": "C:\\Users\\fakedoring\\Pictures\\23.jpg",
+      "Name": "Mike",
+      "Surname": "Kovalenko",
+      "Email": "qwer123@gmail.com",
+      "DateOfBirth": "2006-03-27T00:00:00",
+      "Password": "1234567",
+      "PhoneNumber": "\u002B38(099)4516952",
+      "Balance": 700
+    },
+    "Specialist": null
+  },
+  {
+    "OrderId": 1,
+    "Title": "\u043F\u0440\u043E\u043B",
+    "Category": 8,
+    "Description": "\u043F\u0440\u043E\u043B\u0440\u043F\u043E\u043B",
+    "Price": 2,
+    "Location": "\u0432\u0430\u0440\u0441\u0442\u044C\u043C\u0438\u0442",
+    "Deadline": "2025-05-27T00:00:00",
+    "PaymentTerm": 0,
+    "Status": 2,
+    "Customer": {
+      "UserId": 0,
+      "AvatarPath": "C:\\Users\\fakedoring\\Pictures\\23.jpg",
+      "Name": "Mike",
+      "Surname": "Kovalenko",
+      "Email": "qwer123@gmail.com",
+      "DateOfBirth": "2006-03-27T00:00:00",
+      "Password": "1234567",
+      "PhoneNumber": "\u002B38(099)4516952",
+      "Balance": 695
+    },
+    "Specialist": {
+      "Ratings": [
+        {
+          "Score": 5,
+          "Comment": "It\u0027s ok"
+        }
+      ],
+      "AverageRating": 5,
+      "UserId": 0,
+      "AvatarPath": "C:\\Users\\fakedoring\\Pictures\\05cc3b9ff79e04cf55fb40e3a261f708.jpg",
+      "Name": "Mike",
+      "Surname": "Kovalenko",
+      "Email": "qwer123@gmail.com",
+      "DateOfBirth": "2006-03-27T00:00:00",
+      "Password": "123456",
+      "PhoneNumber": "\u002B38(099)4516952",
+      "Balance": 103
+    }
+  },
+  {
+    "OrderId": 6,
+    "Title": "\u043F\u0432\u0430\u043E\u0430\u043F\u044C\u043B\u0441",
+    "Category": 0,
+    "Description": "\u043F\u0440\u043C\u043E\u043B\u043F\u0440\u044C\u0441",
+    "Price": 1,
+    "Location": "\u0432\u0441\u0430\u0440\u0442\u044C\u043E\u0441\u044C",
+    "Deadline": "2025-05-22T00:00:00",
+    "PaymentTerm": 1,
+    "Status": 0,
+    "Customer": {
+      "UserId": 0,
+      "AvatarPath": "C:\\Users\\fakedoring\\Pictures\\23.jpg",
+      "Name": "Mike",
+      "Surname": "Kovalenko",
+      "Email": "qwer123@gmail.com",
+      "DateOfBirth": "2006-03-27T00:00:00",
+      "Password": "1234567",
+      "PhoneNumber": "\u002B38(099)4516952",
+      "Balance": 695
+    },
+    "Specialist": null
+  }
+]

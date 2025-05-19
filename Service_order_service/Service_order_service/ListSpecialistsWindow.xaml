@@ -1,0 +1,79 @@
+﻿<Window x:Class="Service_order_service.ListSpecialistsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Service_order_service"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="Service Order Service" Height="1080" Width="1920" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DockPanel Background="#73E76E" Height="60" VerticalAlignment="Top">
+            <TextBlock Text="Service Order Service" 
+                   VerticalAlignment="Center"
+                   Margin="10,0,0,0"
+                   FontSize="18"
+                   FontWeight="Bold"
+                   DockPanel.Dock="Left"/>
+            <Button x:Name="CreateOrderButton"
+                    Content="Create Order"
+                    Foreground="Black" Background="White"
+                    Style="{StaticResource MaterialDesignOutlinedButton}"
+                    Margin="10"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Visibility="Collapsed"
+                    Click="Button_CreateOrder"/>
+
+            <Button x:Name="MainPageButton"
+                    Content="Main Page"
+                    Foreground="Black" Background="White"
+                    Margin="10"
+                    Style="{StaticResource MaterialDesignOutlinedButton}" 
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Click="Button_MainPage"/>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" DockPanel.Dock="Right" VerticalAlignment="Center" Margin="0,0,10,0">
+                <Border Width="30" Height="30" CornerRadius="15" Margin="0,0,0,0" VerticalAlignment="Center" ClipToBounds="True">
+                    <Image x:Name="AvatarImage" Stretch="UniformToFill" />
+                </Border>
+                <Button Content="My Profile" Foreground="Black" Background="White"
+                Style="{StaticResource MaterialDesignOutlinedButton}"
+                Margin="5,0,0,0"
+                VerticalAlignment="Center" Click="Button_MyProfile"/>
+                <Button x:Name="ViewOrdersButton"
+                Content="My Orders"
+                Foreground="Black" Background="White"
+                Style="{StaticResource MaterialDesignOutlinedButton}"
+                Margin="5,0,0,0"
+                VerticalAlignment="Center"
+                Click="Button_ViewOrders"/>
+            </StackPanel>
+        </DockPanel>
+        <DataGrid x:Name="SpecialistDataGrid" AutoGenerateColumns="False" Margin="40,80,40,40" IsReadOnly="True" CanUserAddRows="False" SelectionUnit="FullRow" SelectionMode="Single">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="120"/>
+                <DataGridTextColumn Header="Surname" Binding="{Binding Surname}" Width="120"/>
+                <DataGridTextColumn Header="Date of Birth" Binding="{Binding DateOfBirth}" Width="120"/>
+                <DataGridTextColumn Header="Category" Binding="{Binding Category}" Width="120"/>
+                <DataGridTextColumn Header="Rating" Binding="{Binding AverageRating, StringFormat=F1}" Width="80"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}" Width="180"/>
+                <DataGridTextColumn Header="Phone" Binding="{Binding Phone}" Width="120"/>
+                <DataGridTemplateColumn Header="Actions" Width="120">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Button Content="View Profile" Margin="2" Padding="5,2"
+                                        Style="{StaticResource MaterialDesignOutlinedButton}"
+                                        Foreground="Blue"
+                                        Tag="{Binding}"
+                                        Click="ViewProfile_Click"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

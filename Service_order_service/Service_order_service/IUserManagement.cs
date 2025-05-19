@@ -4,6 +4,7 @@
     {
         void AddUser(User user);
         void RemoveUser(User user);
-        void UpdateUser(int userId, string? newPassword = null, string? newPhoneNumber = null);
+        void UpdateCustomer(int userId, string? newPassword = null, string? newPhoneNumber = null);
+        void UpdateSpecialist(int userId, string? newPassword = null, string? newPhoneNumber = null);
     }
 }

@@ -1,11 +1,12 @@
-﻿using System.IO;
-using System.Text.Json;
-
-namespace Service_order_service
+﻿namespace Service_order_service
 {
     public class Customer : User
     {
-        public override string GetUserFileName() => "customers.json";
+        public override string GetUserFileName() => "F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\customers.json";
+
+        public delegate void OrderCreatedEventHandler(object sender, Order order);
+
+        public event OrderCreatedEventHandler? OrderCreated;
 
         public Customer () { }
 
@@ -23,28 +24,26 @@ namespace Service_order_service
 
         public void CreateOrder(Order order)
         {
-            if (order == null)
-                throw new ArgumentNullException(nameof(order));
+            ArgumentNullException.ThrowIfNull(order);
 
             order.Customer = this;
 
-            var orders = JsonStorageService.LoadFromFile<Order>("orders.json");
+            var orders = JsonStorageService.LoadFromFile<Order>("F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\orders.json");
             orders.Add(order);
-            JsonStorageService.SaveToFile("orders.json", orders);
+            JsonStorageService.SaveToFile("F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\orders.json", orders);
+
+            OrderCreated?.Invoke(this, order);
         }
 
         public void CancelOrder(Order order)
         {
-            if (order == null)
-                throw new ArgumentNullException(nameof(order));
+            ArgumentNullException.ThrowIfNull(order);
 
             if (order.Customer == null || order.Customer._userId != this._userId)
                 throw new InvalidOperationException("You are not the owner of this order.");
 
-            var orders = JsonStorageService.LoadFromFile<Order>("orders.json");
-            var existingOrder = orders.FirstOrDefault(o => o.OrderId == order.OrderId);
-            if (existingOrder == null)
-                throw new InvalidOperationException("Order not found.");
+            var orders = JsonStorageService.LoadFromFile<Order>("F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\orders.json");
+            var existingOrder = orders.FirstOrDefault(o => o.OrderId == order.OrderId) ?? throw new InvalidOperationException("Order not found.");
 
             // Повернення коштів
             if (existingOrder.Specialist != null)
@@ -64,54 +63,52 @@ namespace Service_order_service
 
                 if (refund > 0)
                 {
-                    var specialists = JsonStorageService.LoadFromFile<Specialist>("specialists.json");
+                    var specialists = JsonStorageService.LoadFromFile<Specialist>("F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\specialists.json");
                     var existingSpecialist = specialists.FirstOrDefault(s => s._userId == specialist._userId);
                     if (existingSpecialist != null)
                     {
                         existingSpecialist.Balance -= refund;
-                        JsonStorageService.SaveToFile("specialists.json", specialists);
+                        JsonStorageService.SaveToFile("F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\specialists.json", specialists);
                     }
 
-                    var customers = JsonStorageService.LoadFromFile<Customer>("customers.json");
+                    var customers = JsonStorageService.LoadFromFile<Customer>("F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\customers.json");
                     var existingCustomer = customers.FirstOrDefault(c => c._userId == this._userId);
                     if (existingCustomer != null)
                     {
                         existingCustomer.Balance += refund;
-                        JsonStorageService.SaveToFile("customers.json", customers);
+                        JsonStorageService.SaveToFile("F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\customers.json", customers);
                     }
                 }
             }
             existingOrder.Status = OrderStatus.Canceled;
             order.Status = OrderStatus.Canceled;
-            JsonStorageService.SaveToFile("orders.json", orders);
+            JsonStorageService.SaveToFile("F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\orders.json", orders);
         }
 
         public void RateSpecialist(Order order, int ratingValue, string? comment = null)
         {
-            if (order == null)
-                throw new ArgumentNullException(nameof(order));
+            ArgumentNullException.ThrowIfNull(order);
 
-            if (order.Customer == null || order.Customer._userId != this._userId)
+            if (order.Customer == null || order.Customer.UserId != this.UserId)
                 throw new InvalidOperationException("You are not the owner of this order.");
 
             if (order.Status != OrderStatus.Completed)
                 throw new InvalidOperationException("Cannot rate a specialist for an uncompleted order.");
 
-            var specialist = order.Specialist;
-            if (specialist == null)
+            if (order.Specialist == null)
                 throw new InvalidOperationException("This order has no assigned specialist.");
 
-            var rating = new Rating(ratingValue, comment);
-            specialist.AddRating(rating);
+            var specialists = JsonStorageService.LoadFromFile<Specialist>(
+                "F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\specialists.json");
 
-            var specialists = JsonStorageService.LoadFromFile<Specialist>("specialists.json");
-            var existingSpecialist = specialists.FirstOrDefault(s => s._userId == specialist._userId);
-            if (existingSpecialist != null)
-            {
-                existingSpecialist.Ratings = specialist.Ratings;
-                existingSpecialist.AverageRating = specialist.AverageRating;
-                JsonStorageService.SaveToFile("specialists.json", specialists);
-            }
+            var specialistToRate = specialists.FirstOrDefault(s => s.UserId == order.Specialist.UserId) ?? throw new InvalidOperationException("Specialist not found.");
+
+            var rating = new Rating(ratingValue, comment);
+            specialistToRate.AddRating(rating);
+
+            JsonStorageService.SaveToFile(
+                "F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\specialists.json",
+                specialists);
         }
     }
 }

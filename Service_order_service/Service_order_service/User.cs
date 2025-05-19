@@ -1,10 +1,15 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.IO;
+using System.Text.RegularExpressions;
 
 namespace Service_order_service
 {
     public abstract class User
     {
-        private static int NextUserId = 1;
+        public int UserId
+        {
+            get => _userId;
+            set => _userId = value;
+        }
 
         public int _userId;
         public string? _name;
@@ -14,6 +19,8 @@ namespace Service_order_service
         public string? _password;
         public string? _phoneNumber;
         public double _balance;
+
+        public string? AvatarPath { get; set; }
 
         public abstract string GetUserFileName();
 
@@ -44,7 +51,7 @@ namespace Service_order_service
             get => _email;
             set
             {
-                if (string.IsNullOrWhiteSpace(value) || !value.Contains("@"))
+                if (string.IsNullOrWhiteSpace(value) || !value.Contains('@'))
                     throw new ArgumentException("Invalid email.");
                 _email = value;
             }
@@ -102,9 +109,9 @@ namespace Service_order_service
         {
             var users = this switch
             {
-                Customer => JsonStorageService.LoadFromFile<Customer>("customers.json").Cast<User>(),
-                Specialist => JsonStorageService.LoadFromFile<Specialist>("specialists.json").Cast<User>(),
-                Admin => JsonStorageService.LoadFromFile<Admin>("admins.json").Cast<User>(),
+                Customer => JsonStorageService.LoadFromFile<Customer>("F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\customers.json").Cast<User>(),
+                Specialist => JsonStorageService.LoadFromFile<Specialist>("F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\specialists.json").Cast<User>(),
+                Admin => JsonStorageService.LoadFromFile<Admin>("F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\admins.json").Cast<User>(),
                 _ => throw new InvalidOperationException("Unknown user type")
             };
 
@@ -115,13 +122,13 @@ namespace Service_order_service
         {
             var users = this switch
             {
-                Customer => JsonStorageService.LoadFromFile<Customer>("customers.json").Cast<User>().ToList(),
-                Specialist => JsonStorageService.LoadFromFile<Specialist>("specialists.json").Cast<User>().ToList(),
-                Admin => JsonStorageService.LoadFromFile<Admin>("admins.json").Cast<User>().ToList(),
+                Customer => JsonStorageService.LoadFromFile<Customer>("F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\customers.json").Cast<User>().ToList(),
+                Specialist => JsonStorageService.LoadFromFile<Specialist>("F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\specialists.json").Cast<User>().ToList(),
+                Admin => JsonStorageService.LoadFromFile<Admin>("F:\\Documents\\Програмирование\\Лабораторные универа\\2 курс\\2 семестр\\OOP_Project\\Service_order_service\\Service_order_service\\JsonFiles\\admins.json").Cast<User>().ToList(),
                 _ => throw new InvalidOperationException("Unknown user type")
             };
 
-            _userId = users.Any() ? users.Max(u => u._userId) + 1 : 1;
+            _userId = users.Count != 0 ? users.Max(u => u._userId) + 1 : 1;
             users.Add(this);
 
             var fileName = GetUserFileName();
@@ -169,6 +176,47 @@ namespace Service_order_service
                 if (user != null)
                 {
                     user.Balance = this.Balance;
+                    JsonStorageService.SaveToFile(fileName, users);
+                }
+            }
+        }
+
+        public virtual void SetAvatarPath(string path)
+        {
+            if (string.IsNullOrWhiteSpace(path) || !File.Exists(path))
+                throw new ArgumentException("Invalid path to avatar.");
+
+            AvatarPath = path;
+
+            var fileName = GetUserFileName();
+
+            if (this is Customer)
+            {
+                var users = JsonStorageService.LoadFromFile<Customer>(fileName);
+                var user = users.FirstOrDefault(u => u._userId == this._userId);
+                if (user != null)
+                {
+                    user.AvatarPath = this.AvatarPath;
+                    JsonStorageService.SaveToFile(fileName, users);
+                }
+            }
+            else if (this is Specialist)
+            {
+                var users = JsonStorageService.LoadFromFile<Specialist>(fileName);
+                var user = users.FirstOrDefault(u => u._userId == this._userId);
+                if (user != null)
+                {
+                    user.AvatarPath = this.AvatarPath;
+                    JsonStorageService.SaveToFile(fileName, users);
+                }
+            }
+            else if (this is Admin)
+            {
+                var users = JsonStorageService.LoadFromFile<Admin>(fileName);
+                var user = users.FirstOrDefault(u => u._userId == this._userId);
+                if (user != null)
+                {
+                    user.AvatarPath = this.AvatarPath;
                     JsonStorageService.SaveToFile(fileName, users);
                 }
             }

@@ -9,13 +9,13 @@ namespace Service_order_service
         public static List<T> LoadFromFile<T>(string fileName)
         {
             if (!File.Exists(fileName))
-                return new List<T>();
+                return [];
 
             var json = File.ReadAllText(fileName);
             return JsonSerializer.Deserialize<List<T>>(json, new JsonSerializerOptions
             {
                 PropertyNameCaseInsensitive = true
-            }) ?? new List<T>();
+            }) ?? [];
         }
 
         public static void SaveToFile<T>(string fileName, List<T> data)
