@@ -1,3 +1,5 @@
+using System.Linq;
+
 namespace Service_order_service.Helpers
 {
     public static class UserHelper
