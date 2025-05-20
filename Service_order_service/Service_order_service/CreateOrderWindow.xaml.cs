@@ -13,6 +13,8 @@ namespace Service_order_service
             _customer = customer;
             CategoryComboBox.ItemsSource = Enum.GetValues(typeof(ServiceCategory));
             PaymentComboBox.ItemsSource = Enum.GetValues(typeof(PaymentTerm));
+            CategoryComboBox.SelectedIndex = 0;
+            PaymentComboBox.SelectedIndex = 0;
             DeadlineDatePicker.SelectedDate = DateTime.Now.AddDays(1);
 
             _customer.OrderCreated += Customer_OrderCreated;

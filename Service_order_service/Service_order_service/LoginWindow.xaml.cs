@@ -24,49 +24,47 @@ namespace Service_order_service
 
             User? user = userType switch
             {
-                "Customer" => new Customer(),
-                "Specialist" => new Specialist(),
-                "Admin" => new Admin(),
+                "Customer" => FindUser<Customer>(email, password),
+                "Specialist" => FindUser<Specialist>(email, password),
+                "Admin" => FindUser<Admin>(email, password),
                 _ => null
             };
 
             if (user == null)
             {
-                ShowMessage("Invalid user type selected.");
+                ShowMessage("Login failed. Check email and password.");
                 return;
             }
 
-            bool success = user.Login(email, password);
-            if (success)
+            ShowMessage("Login successful!", true);
+            if (user is Admin admin)
             {
-                ShowMessage("Login successful!", true);
-                if (user is Admin admin)
-                {
-                    AdminWindow adminWindow = new AdminWindow(admin);
-                    adminWindow.Show();
-                }
-                else
-                {
-                    MainWindowService mainWindow = new MainWindowService(user);
-                    mainWindow.Show();
-                }
-                this.Close();
+                AdminWindow adminWindow = new (admin);
+                adminWindow.Show();
             }
             else
             {
-                ShowMessage("Login failed. Check email and password.");
+                MainWindowService mainWindow = new (user);
+                mainWindow.Show();
             }
+            this.Close();
         }
 
-        private void ShowMessage(string message, bool success = false)
+        private static T? FindUser<T>(string email, string password) where T : User
         {
-            var color = success ? "Green" : "Red";
+            var users = JsonStorageService.LoadFromFile<T>(Activator.CreateInstance<T>().GetUserFileName());
+            return users.FirstOrDefault(u => u.Email == email && u.Password == password);
+        }
+
+        private static void ShowMessage(string message, bool success = false)
+        {
+            _ = success ? "Green" : "Red";
             MessageBox.Show(message, "Login", MessageBoxButton.OK, success ? MessageBoxImage.Information : MessageBoxImage.Warning);
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
+            MainWindow mainWindow = new ();
             mainWindow.Show();
             this.Close();
         }

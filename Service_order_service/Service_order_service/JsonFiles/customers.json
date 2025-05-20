@@ -1,24 +1,57 @@
 [
   {
-    "UserId": 0,
-    "AvatarPath": "C:\\Users\\fakedoring\\Pictures\\23.jpg",
-    "Name": "Mike",
-    "Surname": "Kovalenko",
-    "Email": "qwer123@gmail.com",
-    "DateOfBirth": "2006-03-27T00:00:00",
-    "Password": "1234567",
-    "PhoneNumber": "\u002B38(099)4516952",
-    "Balance": 695
-  },
-  {
     "UserId": 1,
     "AvatarPath": null,
-    "Name": "\u0433\u043D\u0449\u0440\u0434\u043B\u043E\u0440\u0434",
-    "Surname": "\u0440\u043E\u043B\u0434\u0433\u043D",
-    "Email": "\u043E\u044B\u043B\u0434\u0432\u043E\u043F\u0434\u043B@gmail.com",
-    "DateOfBirth": "2005-05-05T00:00:00",
-    "Password": "123456789",
-    "PhoneNumber": "\u002B38(099)3456789",
-    "Balance": 100
+    "Name": "Anna",
+    "Surname": "Shevchenko",
+    "Email": "anna.shevchenko@gmail.com",
+    "DateOfBirth": "1995-04-12T00:00:00",
+    "Password": "pass1234",
+    "PhoneNumber": "\u002B38(067)1234567",
+    "Balance": 500
+  },
+  {
+    "UserId": 2,
+    "AvatarPath": null,
+    "Name": "Ivan",
+    "Surname": "Petrenko",
+    "Email": "ivan.petrenko@gmail.com",
+    "DateOfBirth": "1988-09-23T00:00:00",
+    "Password": "qwerty88",
+    "PhoneNumber": "\u002B38(050)7654321",
+    "Balance": 1200
+  },
+  {
+    "UserId": 3,
+    "AvatarPath": null,
+    "Name": "Olena",
+    "Surname": "Koval",
+    "Email": "olena.koval@gmail.com",
+    "DateOfBirth": "2000-01-15T00:00:00",
+    "Password": "olena2000",
+    "PhoneNumber": "+38(093)1112233",
+    "Balance": 300
+  },
+  {
+    "UserId": 4,
+    "AvatarPath": null,
+    "Name": "Dmytro",
+    "Surname": "Bondarenko",
+    "Email": "dmytro.bond@gmail.com",
+    "DateOfBirth": "1992-07-30T00:00:00",
+    "Password": "dmytro007",
+    "PhoneNumber": "+38(097)5556677",
+    "Balance": 800
+  },
+  {
+    "UserId": 5,
+    "AvatarPath": null,
+    "Name": "Svitlana",
+    "Surname": "Marchenko",
+    "Email": "svitlana.marchenko@gmail.com",
+    "DateOfBirth": "1985-11-05T00:00:00",
+    "Password": "svitlana85",
+    "PhoneNumber": "+38(099)8889990",
+    "Balance": 150
   }
 ]

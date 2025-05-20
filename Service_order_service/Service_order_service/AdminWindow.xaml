@@ -130,8 +130,12 @@
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="ID" Binding="{Binding OrderId}" Width="50"/>
                             <DataGridTextColumn Header="Title" Binding="{Binding Title}" Width="*"/>
-                            <DataGridTextColumn Header="Category" Binding="{Binding Category}" Width="*"/>
+                            <DataGridTextColumn Header="Category" Binding="{Binding Category}" Width="100"/>
+                            <DataGridTextColumn Header="Description" Binding="{Binding Description}" Width="*"/>
+                            <DataGridTextColumn Header="Location" Binding="{Binding Location}" Width="*"/>
+                            <DataGridTextColumn Header="DeadLine" Binding="{Binding Deadline, StringFormat=d}" Width="120"/>
                             <DataGridTextColumn Header="Price" Binding="{Binding Price}" Width="80"/>
+                            <DataGridTextColumn Header="Payment Term" Binding="{Binding PaymentTerm}" Width="130"/>
                             <DataGridTextColumn Header="Status" Binding="{Binding Status}" Width="100"/>
                             <DataGridTextColumn Header="Customer" Binding="{Binding Customer.Name}" Width="*"/>
                             <DataGridTextColumn Header="Specialist" Binding="{Binding Specialist.Name}" Width="*"/>
