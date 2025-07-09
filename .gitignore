@@ -5,3 +5,6 @@
 /Service_order_service/.vs/Service_order_service
 /Service_order_service/Service_order_service/bin/Debug/net8.0-windows
 /Service_order_service/Service_order_service/obj/Debug/net8.0-windows/Dialogs
+/Service_order_service/Service_order_service/obj/Debug/net8.0-windows/AdminWindow.g.i.cs
+/Service_order_service/Service_order_service/obj/Debug/net8.0-windows/CreateOrderWindow.g.i.cs
+/Service_order_service/Service_order_service/obj/Debug/net8.0-windows
