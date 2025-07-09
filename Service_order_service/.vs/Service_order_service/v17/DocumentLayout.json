@@ -162,7 +162,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 570,
-          "SelectedChildIndex": 31,
+          "SelectedChildIndex": 30,
           "Children": [
             {
               "$type": "Bookmark",
@@ -171,10 +171,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Document",
@@ -402,7 +398,8 @@
               "RelativeToolTip": "Service_order_service\\MainWindowService.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T16:14:54.003Z"
+              "WhenOpened": "2025-05-16T16:14:54.003Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -426,7 +423,8 @@
               "RelativeToolTip": "Service_order_service\\ListSpecialistsWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T21:04:17.149Z"
+              "WhenOpened": "2025-05-11T21:04:17.149Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -438,7 +436,8 @@
               "RelativeToolTip": "Service_order_service\\MyOrdersWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T14:15:18.892Z"
+              "WhenOpened": "2025-05-16T14:15:18.892Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -508,7 +507,8 @@
               "RelativeToolTip": "Service_order_service\\Order.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T10:38:43.871Z"
+              "WhenOpened": "2025-04-01T10:38:43.871Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -533,7 +533,8 @@
               "RelativeToolTip": "Service_order_service\\Specialist.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAA8wCYAAABuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T10:38:38.954Z"
+              "WhenOpened": "2025-04-01T10:38:38.954Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -545,7 +546,8 @@
               "RelativeToolTip": "Service_order_service\\Customer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-03T19:34:05.638Z"
+              "WhenOpened": "2025-04-03T19:34:05.638Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -557,7 +559,8 @@
               "RelativeToolTip": "Service_order_service\\User.cs",
               "ViewState": "AgIAAGQAAAAAAAAAAAAswHYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T10:28:17.434Z"
+              "WhenOpened": "2025-04-01T10:28:17.434Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -624,6 +627,10 @@
               "RelativeToolTip": "Service_order_service\\CreateOrderWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-05-11T21:22:04.949Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             }
           ]
         },

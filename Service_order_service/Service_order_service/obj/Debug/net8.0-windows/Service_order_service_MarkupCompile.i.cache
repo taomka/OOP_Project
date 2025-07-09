@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 F:\Documents\Програмирование\Лабораторные универа\2 курс\2 семестр\OOP_Project\Service_order_service\Service_order_service\App.xaml
-11407045341
+11-2050814751
 
-16576489490
-198-344842731
-MainWindow.xaml;
+30-246099907
+201214777259
+AdminWindow.xaml;CreateOrderWindow.xaml;Dialogs\RateSpecialistDialog.xaml;ListOrdersWindow.xaml;ListSpecialistsWindow.xaml;LoginWindow.xaml;MainWindow.xaml;MainWindowService.xaml;MyOrdersWindow.xaml;MyProfileWindow.xaml;RegistrationWindow.xaml;
 
 False
 
