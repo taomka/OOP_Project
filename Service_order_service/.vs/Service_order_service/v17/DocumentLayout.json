@@ -353,7 +353,8 @@
               "RelativeToolTip": "Service_order_service\\ListOrdersWindow.xaml.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAiwCUAAABeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-19T19:07:32.022Z"
+              "WhenOpened": "2025-05-19T19:07:32.022Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -517,7 +518,7 @@
               "RelativeDocumentMoniker": "Service_order_service\\Admin.cs",
               "ToolTip": "F:\\Documents\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\\u041B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u043D\u044B\u0435 \u0443\u043D\u0438\u0432\u0435\u0440\u0430\\2 \u043A\u0443\u0440\u0441\\2 \u0441\u0435\u043C\u0435\u0441\u0442\u0440\\OOP_Project\\Service_order_service\\Service_order_service\\Admin.cs",
               "RelativeToolTip": "Service_order_service\\Admin.cs",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAqwJUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAqwJIAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-01T10:38:42.231Z",
               "EditorCaption": ""

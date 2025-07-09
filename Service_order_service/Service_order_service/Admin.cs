@@ -145,7 +145,5 @@
             }
         }
         // cherry-pick
-        // amend
-        // added git tag v1.0.0
     }
 }
