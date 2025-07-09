@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Service_order_service/.vs/Service_order_service
+/Service_order_service/Service_order_service/bin/Debug/net8.0-windows
+/Service_order_service/Service_order_service/obj/Debug/net8.0-windows/Dialogs
