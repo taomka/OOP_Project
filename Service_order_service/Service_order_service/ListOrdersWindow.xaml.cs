@@ -33,25 +33,33 @@ namespace Service_order_service
 
         private void AcceptOrder_Click(object sender, RoutedEventArgs e)
         {
-            if (OrdersDataGrid.SelectedItem is Order selectedOrder && _specialist != null)
+            try
             {
-                if (selectedOrder.Status == OrderStatus.Pending)
+                if (OrdersDataGrid.SelectedItem is Order selectedOrder && _specialist != null)
                 {
-                    _specialist.ApplyForOrder(selectedOrder);
-                    SaveOrders();
-                    LoadOrders();
-                    MessageBox.Show("Order accepted successfully.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                    if (selectedOrder.Status == OrderStatus.Pending)
+                    {
+                        _specialist.ApplyForOrder(selectedOrder);
+                        SaveOrders();
+                        LoadOrders();
+                        MessageBox.Show("Order accepted successfully.", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Order cannot be accepted.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Order cannot be accepted.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    MessageBox.Show("Please select an order to accept.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
                 }
             }
-            else
+            catch (InvalidOperationException)
             {
-                MessageBox.Show("Please select an order to accept.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show("Customer does not have enough balance for prepayment.", "Warning", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
+
 
         private void Button_MyProfile(object sender, RoutedEventArgs e)
         {
